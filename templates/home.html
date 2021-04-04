@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <title>Digicard &mdash; WiiLink24 </title>
+        <meta name="description" content="An expansion to the Digicam Print Channel, here comes Digicard. If you are in the WiiLink24 Discord server, you can run /card to view your Digicam Business Card.">
+	    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0">
+        <link rel="stylesheet" href="https://proicons.netlify.app/css/icons.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/style.css">
+        <link rel="icon" href="assets/icon.png">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="navbar" id="navbar">
+            <img src="assets/icon.png" style="margin-top: -2px" width="48" height="48">
+        </div>
+        <div class="content">
+            <div class="header">
+            <h2>Digicard is a service that allows for quick sharing of Digicam Business Cards in the WiiLink24 Discord</h2>
+                <p>Setting up your Digicard is as easy as 1, 2, 3!</p>
+                <p>Sign in with your Discord account and upload your Digicam Business Card.</p>
+                <p>Run /card in the WiiLink24 Discord and profit!</p>
+
+            </div>
+
+        <!-- Flickity HTML init -->
+            <div class="gallery js-flickity"
+                data-flickity-options='{ "wrapAround": true }'>
+                <div class="gallery-cell"></div>
+                <div class="gallery-cell"></div>
+                <div class="gallery-cell"></div>
+                <div class="gallery-cell"></div>
+                <div class="gallery-cell"></div>
+            </div>
+        </div>
+        <div id="demo" class="carousel slide" data-ride="carousel">
+
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="assets/oscie.png" alt="Los Angeles" width="1400" height="500" class="d-block w-75 mx-auto">
+    </div>
+    <div class="carousel-item">
+      <img src="assets/turtle.png" alt="Chicago" width="1400" height="500" class="d-block w-75 mx-auto">
+    </div>
+    <div class="carousel-item">
+      <img src="assets/shoko.png" alt="New York" width="1400" height="500" class="d-block w-75 mx-auto">
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+        <div class="footer">
+            <div class="item">
+                <h2><i class="fa fa-info-circle"></i> About WiiLink24</h2>
+                <p>WiiLink24 is a revival service for the now-defunct Japanese exclusive Wii channels. This service will (soon) allow you to use <b>Wii no Ma</b>, <b>Demae Channel</b>, and <b>Digicam Print Channel</b>.</p>
+            </div>
+            <div class="item">
+                <h3><i class="fa fa-copyright"></i> 2020-2021 WiiLink24 Team</h3>
+                <p>We are not associated with Nintendo nor its affiliates. We are also not associated with the staff of any other online services for the Wii.</p>
+            </div>
+            <div class="item">
+                <h3><i class="fa fa-globe-americas"></i> Social Media</h3>
+                <a target="_blank" href="https://github.com/wiilink24" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+                <br>
+                <a target="_blank" href="https://discord.gg/n4ta3w6" rel="noopener"><i class="fab fa-discord"></i> Discord</a>
+                <br>
+                <a target="_blank" href="https://twitter.com/wiilink24" rel="noopener"><i class="fab fa-twitter"></i> Twitter</a>
+		        <br>
+		        <a target="_blank" href="https://www.patreon.com/WiiLink24" rel="noopener"><i class="fab fa-patreon"></i> Patreon</a>
+                <br>
+                <a target="_blank" href="https://www.youtube.com/channel/UC_14J0EMfli2hVoBaQq0d3w" rel="noopener"><i class="fab fa-youtube"></i> YouTube</a>
+            </div>
+        </div>
+        <script>
+            function mobileNav() {
+              var x = document.getElementById("navbar");
+              if (x.className === "navbar") {
+                x.className += " responsive";
+              } else {
+                x.className = "navbar";
+              }
+            }
+        </script>
+    </body>
+</html>
