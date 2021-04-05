@@ -1,1 +1,1 @@
-from . import assets
+from . import assets, routes
