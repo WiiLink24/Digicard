@@ -1,14 +1,15 @@
 from flask_wtf import FlaskForm
-from flask_wtf.file import FileRequired
+from flask_wtf.file import FileRequired, FileAllowed
 from wtforms import (
-    StringField,
     SubmitField,
-    PasswordField,
     FileField,
-    SelectField,
-    TextAreaField,
-    BooleanField,
 )
-from wtforms.validators import DataRequired, Length, ValidationError
+
 
 class UploadCard(FlaskForm):
+    card = FileField("Business Card",
+                     validators=[FileRequired(),
+                                 FileAllowed(['jpg', 'png'], 'Images only!')
+                                 ]
+                     )
+    upload = SubmitField("Upload Card")

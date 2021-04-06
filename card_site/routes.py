@@ -1,5 +1,7 @@
-from flask import render_template, redirect, url_for
+from flask import render_template, redirect, url_for, send_from_directory
+from card_site.helpers import generate_random
 from flask_discord import DiscordOAuth2Session
+from werkzeug.exceptions import Forbidden
 from main import app
 
 discord = DiscordOAuth2Session(app)
@@ -31,4 +33,16 @@ def callback():
 def logout():
     discord.revoke()
     return redirect(url_for(".index"))
+
+
+@app.route("/view/")
+def view_card():
+    if not discord.authorized:
+        return Forbidden
+
+    random = generate_random(10)
+    user = discord.fetch_user()
+
+    return render_template("view_card.html", user=user.avatar_url, username=user.name, user_id=user.id, random=random)
+
 

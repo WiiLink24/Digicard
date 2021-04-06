@@ -8,6 +8,10 @@ body {
     padding: 10px;
 }
 
+.alt_img {
+    background-image:url('default.png');
+}
+
 .green {
     background-color: rgb(48, 176, 46);
     padding: 10px;

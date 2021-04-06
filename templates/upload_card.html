@@ -23,53 +23,26 @@
         </div>
         <div class="content">
             <div class="header">
-            <h2>Digicard is a service that allows for quick sharing of Digicam Business Cards in the WiiLink24 Discord</h2>
-                <p>Setting up your Digicard is as easy as 1, 2, 3!</p>
-                <p>Sign in with your Discord account and upload your Digicam Business Card.</p>
-                <p>Run /card in the WiiLink24 Discord and profit!</p>
-
+            <h2>Here you can upload your Digicam Business Card</h2>
+            <form action="" method="post" enctype="multipart/form-data">
+                <br>
+                <br>
+                <p>
+                    {{ form.hidden_tag() }}
+                    <b>Business Card</b> {{ form.card(size=32) }}
+                    {{ form.upload(class_="button is-success") }}
+                    {% with messages = get_flashed_messages() %}
+                        {% for msg in messages %}
+                            {{ msg }}
+                        {% endfor %}
+                    {% endwith %}
+                </p>
+                <br>
+                <br>
+            </form>
             </div>
 
-        <!-- Flickity HTML init -->
-            <div class="gallery js-flickity"
-                data-flickity-options='{ "wrapAround": true }'>
-                <div class="gallery-cell"></div>
-                <div class="gallery-cell"></div>
-                <div class="gallery-cell"></div>
-                <div class="gallery-cell"></div>
-                <div class="gallery-cell"></div>
-            </div>
-        </div>
-        <div id="demo" class="carousel slide" data-ride="carousel">
 
-
-  <!-- The slideshow -->
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="assets/oscie.png" alt="Los Angeles" width="800" height="500" class="d-block w-80 mx-auto">
-    </div>
-    <div class="carousel-item">
-      <img src="assets/turtle.png" alt="Chicago" width="800" height="500" class="d-block w-80 mx-auto">
-    </div>
-    <div class="carousel-item">
-      <img src="assets/shoko.png" alt="New York" width="800" height="500" class="d-block w-80 mx-auto">
-    </div>
-         <div class="carousel-item">
-      <img src="assets/ugh.png" alt="New York" width="800" height="500" class="d-block w-80 mx-auto">
-    </div>
-         <div class="carousel-item">
-      <img src="assets/lillie.png" alt="New York" width="800" height="500" class="d-block w-80 mx-auto">
-    </div>
-  </div>
-
-  <!-- Left and right controls -->
-  <a class="carousel-control-prev" href="#demo" data-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </a>
-  <a class="carousel-control-next" href="#demo" data-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </a>
-</div>
         <div class="footer">
             <div class="item">
                 <h2><i class="fa fa-info-circle"></i> About WiiLink24</h2>

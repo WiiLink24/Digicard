@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Digicard &mdash WiiLink24</title>
+    <link rel="stylesheet" href="https://proicons.netlify.app/css/icons.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="icon" href="/assets/icon.png">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0">
+</head>
+<body>
+         <div class="navbar" id="navbar">
+            <a href="https://wiilink24.com"> <img src="/assets/icon.png" style="margin-top: -2px" width="60" height="60"> </a>
+            {% if user == "e" %}
+                <a class="navbar" href="/login">Login</a>
+            {% else %}
+            <a class="navbar" href="/view"><img class="circle" src="{{ user }}" style="margin-top: -2px;" width="48" height="48">  {{username}}</a>
+            {% endif %}
+        </div>
+            <div class="content">
+            <div class="header">
+            <h1>Your Digicard</h1>
+                <a class="alt_img" href="/upload"><img src="/card/{{ user_id }}.png?randomizer={{ random }}" alt="" width="800" height="500"></a>
+                <h4>Click on the card to upload a new image.</h4>
+            </div>
+
+        <div class="footer">
+            <div class="item">
+                <h2><i class="fa fa-info-circle"></i> About WiiLink24</h2>
+                <p>WiiLink24 is a revival service for the now-defunct Japanese exclusive Wii channels. This service will (soon) allow you to use <b>Wii no Ma</b>, <b>Demae Channel</b>, and <b>Digicam Print Channel</b>.</p>
+            </div>
+            <div class="item">
+                <h3><i class="fa fa-copyright"></i> 2020-2021 WiiLink24 Team</h3>
+                <p>We are not associated with Nintendo nor its affiliates. We are also not associated with the staff of any other online services for the Wii.</p>
+            </div>
+            <div class="item">
+                <h3><i class="fa fa-globe-americas"></i> Social Media</h3>
+                <a target="_blank" href="https://github.com/wiilink24" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+                <br>
+                <a target="_blank" href="https://discord.gg/n4ta3w6" rel="noopener"><i class="fab fa-discord"></i> Discord</a>
+                <br>
+                <a target="_blank" href="https://twitter.com/wiilink24" rel="noopener"><i class="fab fa-twitter"></i> Twitter</a>
+		        <br>
+		        <a target="_blank" href="https://www.patreon.com/WiiLink24" rel="noopener"><i class="fab fa-patreon"></i> Patreon</a>
+                <br>
+                <a target="_blank" href="https://www.youtube.com/channel/UC_14J0EMfli2hVoBaQq0d3w" rel="noopener"><i class="fab fa-youtube"></i> YouTube</a>
+            </div>
+        </div>
+</body>
+</html>

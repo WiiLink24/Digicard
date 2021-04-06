@@ -16,3 +16,8 @@ if app.debug:
     @app.route("/js/<filename>.js")
     def js(filename):
         return send_from_directory("js", filename + ".js")
+
+
+    @app.route("/card/<discord_id>.png")
+    def digicard(discord_id):
+        return send_from_directory("assets/cards", discord_id + ".png")

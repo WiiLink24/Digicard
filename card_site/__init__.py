@@ -1,1 +1,1 @@
-from . import assets, routes
+from . import assets, routes, upload
