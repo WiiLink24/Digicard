@@ -1,9 +1,0 @@
-version: '3'
-
-services:
-  digicard:
-    build: .
-    ports:
-     - '127.0.0.1:8192:5000'
-    # volumes:
-    #    - ./todo:/determine-user-data
