@@ -1,3 +1,4 @@
 Flask
 flask-wtf
 python-dotenv
+flask_discord
