@@ -9,7 +9,7 @@ body {
 }
 
 .alt_img {
-    background-image:url('default.png');
+    background-image:url("/assets/shoko.png");
 }
 
 .green {

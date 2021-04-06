@@ -7,9 +7,5 @@ from wtforms import (
 
 
 class UploadCard(FlaskForm):
-    card = FileField("Business Card",
-                     validators=[FileRequired(),
-                                 FileAllowed(['jpg', 'png'], 'Images only!')
-                                 ]
-                     )
+    card = FileField("Business Card")
     upload = SubmitField("Upload Card")
