@@ -41,15 +41,14 @@ li {
 }
 
 .navbar a {
-    color: white;
-    padding: 4px 12px;
+    color: #ffffff;
     text-decoration: none;
-    font-size: 24px;
+    font-size: 15px;
     transition: .3s;
 }
 
 .navbar a:hover {
-    background-color: #343734;
+    background-color: #697769;
     border-radius: 12px;
 }
 
@@ -104,10 +103,6 @@ li {
     text-align: center;
 }
 
-.embed iframe {
-    width: 960px;
-    height: 540px;
-}
 
 .section {
     padding: 30px;
@@ -116,25 +111,6 @@ li {
     background-color: #1e5529;
 }
 
-.section h1, .section p, .section li, .section h2, .section h3 {
-    margin-left: 20%;
-    margin-right: 20%;
-}
-
-.faq {
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-top: 3px;
-    padding-bottom: 3px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: #1e5529;
-}
-
-.faq h1, .faq p, .faq li, .faq h2 {
-    margin-left: 30%;
-    margin-right: 30%;
-}
 
 .header h1, .header ul {
     margin-left: 20%;
@@ -284,6 +260,10 @@ li {
         padding-top: 3px;
         padding-bottom: 3px;
     }
+}
+
+.circle {
+  border-radius: 50%;
 }
 
 
