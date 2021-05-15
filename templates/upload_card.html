@@ -29,7 +29,8 @@
                 <br>
                 <p>
                     {{ form.hidden_tag() }}
-                    <b>Business Card</b> {{ form.card(size=32) }}
+                    <b>Business Card</b> {{ form.card(size=32) }} </br>
+                    {{ form.card_id.label }} {{ form.card_id() }}
                     {{ form.upload(class_="button is-success") }}
                     {% with messages = get_flashed_messages() %}
                         {% for msg in messages %}

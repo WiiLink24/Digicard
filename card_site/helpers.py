@@ -19,6 +19,6 @@ def generate_random(length: int):
     return password
 
 
-def validate_card(card_id: bytes) -> bool:
+def validate_card(card_id: int) -> bool:
     if models.Orders.query().filter_by(order_id=card_id).is_business_card:
         return True
