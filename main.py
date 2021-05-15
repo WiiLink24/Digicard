@@ -12,7 +12,7 @@ os.environ["OAUTHLIB_INSECURE_TRANSPORT"] = "true"    # !! Only in development e
 app.config["DISCORD_CLIENT_ID"] = os.getenv("SECRET_ID")
 app.config["DISCORD_CLIENT_SECRET"] = os.getenv("SECRET_KEY")
 app.config["DISCORD_REDIRECT_URI"] = "http://card.wiilink24.com/callback"
-
+app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv("SQLALCHEMY_DATABASE_URI", 'sqlite:///amongus.db')
 if __name__ == "__main__":
     app.run()
 
