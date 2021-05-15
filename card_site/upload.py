@@ -21,8 +21,8 @@ def upload():
 
         if card:
             card_data = card.read()
-
-            if validate_card(card_data):
+            card_id = form.card_id.data
+            if validate_card(card_id):
                 save_card_data(discord.user_id, card_data)
 
                 return redirect("/view")
