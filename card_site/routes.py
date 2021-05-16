@@ -1,4 +1,4 @@
-from flask import render_template, redirect, url_for, send_from_directory
+from flask import render_template, redirect, url_for
 from card_site.helpers import generate_random
 from flask_discord import DiscordOAuth2Session
 from werkzeug.exceptions import Forbidden
