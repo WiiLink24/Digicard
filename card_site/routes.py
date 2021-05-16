@@ -19,7 +19,7 @@ def index():
 
 @app.route("/login/")
 def login():
-    return discord.create_session()
+    return discord.create_session(scope=["identify"], permissions=8)
 
 
 @app.route("/callback/")
