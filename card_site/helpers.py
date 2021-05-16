@@ -20,5 +20,5 @@ def generate_random(length: int):
 
 
 def validate_card(card_id: int) -> bool:
-    if models.Orders.query().filter_by(order_id=card_id).is_business_card:
+    if models.Orders.query().filter_by(order_id=card_id).first().is_business_card:
         return True
