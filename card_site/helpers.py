@@ -24,18 +24,12 @@ def generate_random(length: int):
 def validate_card(card_id: int) -> bool:
     # Checks if the card exists in our database
     check_db = Orders.query.filter_by(order_id=card_id).first()
-    print(check_db)
 
     # It cannot query a column if the order_id doesn't exist.
     # So we check for it's existence first.
-    if check_db is None:
+    if check_db:
         return False
 
     # Now that we know the card exists, we can query the is_business_card column.
-    if check_db.is_business_card == 1:
-        print(check_db.is_business_card)
-        return True
-
-    if check_db.is_business_card == 0:
-        print(check_db.is_business_card)
-        return False
+    return check_db.is_business_card == 1
+    
