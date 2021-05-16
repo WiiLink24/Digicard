@@ -6,8 +6,12 @@ WORKDIR /home/server
 # Copy requirements first as to not disturb cache for other changes.
 COPY requirements.txt .
 
-RUN pip3 install -r requirements.txt && \
-  pip3 install gunicorn
+RUN apk add -U --no-cache libpq
+
+RUN apk add --no-cache --virtual .build-deps build-base postgresql-dev && \
+  pip3 install -r requirements.txt && \
+  pip3 install gunicorn && \
+  apk del .build-deps
 
 USER server
 
