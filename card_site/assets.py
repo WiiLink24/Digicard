@@ -13,11 +13,12 @@ if app.debug:
     def css():
         return send_from_directory("templates", "style.css")
 
+
     @app.route("/js/<filename>.js")
     def js(filename):
         return send_from_directory("js", filename + ".js")
 
 
-    @app.route("/card/<discord_id>.png")
+    @app.route("/card/<discord_id>.jpg")
     def digicard(discord_id):
-        return send_from_directory("assets/cards", discord_id + ".png")
+        return send_from_directory("cards", filename + ".jpg")
