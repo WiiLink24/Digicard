@@ -11,12 +11,14 @@ app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 db = SQLAlchemy(app)
 
-app.secret_key = b"%\xe0'\x01\xdeH\x8e\x85m|\xb3\xffCN\xc9g"
-os.environ["OAUTHLIB_INSECURE_TRANSPORT"] = "true"    # !! Only in development environment.
+app.secret_key = config.secret_key
+if app.debug:
+    # !! Only use in a development environment.
+    os.environ["OAUTHLIB_INSECURE_TRANSPORT"] = "true"
 
-app.config["DISCORD_CLIENT_ID"] = os.getenv("SECRET_ID")
-app.config["DISCORD_CLIENT_SECRET"] = os.getenv("SECRET_KEY")
-app.config["DISCORD_REDIRECT_URI"] = "http://dev.wiilink24.com/callback"
+app.config["DISCORD_CLIENT_ID"] = config.discord_client_id
+app.config["DISCORD_CLIENT_SECRET"] = config.discord_client_secret
+app.config["DISCORD_REDIRECT_URI"] = config.discord_redirect_uri
 if __name__ == "__main__":
     app.run()
 
