@@ -17,18 +17,17 @@ def upload():
     form = UploadCard()
 
     if form.validate_on_submit():
-        card = form.card.data
+        card_id = form.card_id.data
 
-        if card:
-            card_data = card.read()
-            card_id = form.card_id.data
+        if card_id:
             if validate_card(card_id):
-                save_card_data(discord.user_id, card_data)
+                save_card_data(card_id, discord.user_id)
 
                 return redirect("/view")
             else:
-                flash("Only Digicam Business Cards are allowed")
+                flash("Invalid Order ID")
         else:
+            # The user somehow inputted nothing and it accepted it
             flash("Error Uploading Card")
 
     return render_template("upload_card.html", form=form, user=user.avatar_url, username=user.name, user_id=user.id)
