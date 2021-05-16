@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Digicard &mdash WiiLink24</title>
+    <title>Digicard &mdash; WiiLink24</title>
     <link rel="stylesheet" href="https://proicons.netlify.app/css/icons.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="/assets/style.css">
@@ -21,11 +21,11 @@
             <div class="content">
             <div class="header">
             <h1>Your Digicard</h1>
-                <a href="/upload"><img src="" id="myImage" width="800" height="500"></a>
+                <a href="/upload"><img id="myImage" width="800" height="500"></a>
                 <h4>Click on the card to set a new image.</h4>
             </div>
                 <script type='text/javascript'>
-                    document.getElementById('myImage').src = "/card/{{ user_id }}.png?randomizer={{ random }}";
+                    document.getElementById('myImage').src = "/card/{{ user_id }}.jpg?randomizer={{ random }}";
 
                     document.getElementById('myImage').onerror = function() {
                     document.getElementById('myImage').src = "/assets/placeholder.png";
