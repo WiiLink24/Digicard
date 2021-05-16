@@ -7,7 +7,7 @@ from models import Orders
 
 def save_card_data(order_id: str, discord_id: int):
     # Move card to assets
-    original = rf"orders/{order_id}/Page\ 1.jpg"
+    original = rf"orders/{order_id}/Page 1.jpg"
     moved = rf"assets/cards/{discord_id}.jpg"
     shutil.move(original, moved)
 
@@ -27,9 +27,8 @@ def validate_card(card_id: int) -> bool:
 
     # It cannot query a column if the order_id doesn't exist.
     # So we check for it's existence first.
-    if check_db:
+    if check_db is None:
         return False
 
     # Now that we know the card exists, we can query the is_business_card column.
-    return check_db.is_business_card == 1
-    
+    return check_db.is_business_card
