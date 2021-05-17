@@ -3,3 +3,4 @@ flask-wtf
 Flask-SQLAlchemy
 python-dotenv
 flask_discord
+psycopg2
