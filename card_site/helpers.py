@@ -8,7 +8,7 @@ from models import Orders
 def save_card_data(order_id: str, discord_id: int):
     # Move card to assets
     original = rf"orders/{order_id}/Page 1.jpg"
-    moved = rf"assets/cards/{discord_id}.jpg"
+    moved = rf"cards/{discord_id}.jpg"
     shutil.move(original, moved)
 
 def generate_random(length: int):
