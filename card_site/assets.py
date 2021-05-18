@@ -2,6 +2,10 @@ from main import app
 from flask import send_from_directory
 
 
+@app.route("/cards/<discord_id>.jpg")
+def digicard(discord_id):
+    return send_from_directory("./cards", discord_id  + ".jpg")
+
 if app.debug:
 
     @app.route("/assets/<filename>.png")
@@ -19,6 +23,3 @@ if app.debug:
         return send_from_directory("js", filename + ".js")
 
 
-    @app.route("/card/<discord_id>.jpg")
-    def digicard(discord_id):
-        return send_from_directory("cards", filename + ".jpg")

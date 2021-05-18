@@ -25,7 +25,7 @@
                 <h4>Click on the card to set a new image.</h4>
             </div>
                 <script type='text/javascript'>
-                    document.getElementById('myImage').src = "/card/{{ user_id }}.jpg?randomizer={{ random }}";
+                    document.getElementById('myImage').src = "/cards/{{ user_id }}.jpg?randomizer={{ random }}";
 
                     document.getElementById('myImage').onerror = function() {
                     document.getElementById('myImage').src = "/assets/placeholder.png";
